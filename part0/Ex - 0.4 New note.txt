@@ -1,0 +1,19 @@
+title fullstackopen Exercise - 0.4 New note
+
+actor User
+User->Browser: Click on submit button of Form
+Browser->Server: Send the user input to the server
+note right of Browser: HTTP POST request
+note left of Server: first one is Form submit event
+Server->Browser: Send response to browser
+note left of Server: 302 status code response
+note right of Browser: Reloads and causes below requests
+Browser->Server: Fetch main.css
+note right of Browser: GET request
+Browser->Server: Fetch main.js
+note right of Browser: GET request
+Browser->Server: Fetch raw data of the notes (data.json)
+note right of Browser: GET request
+Server->Browser: Provide updated data JSON
+note left of Server: Submitting form - HTTP POST req
+Browser->User: Render page

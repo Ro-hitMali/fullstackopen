@@ -1,0 +1,20 @@
+title fullstackopen Exercise - 0.6 New note in Single page app
+
+actor User
+note right of User: Provide inputs in form
+User->Browser: Click on submit button
+Browser->Server: Send user input to server
+note right of Browser: Request method HTTP POST
+note right of Browser: Add input to new_note_spa file
+Browser->Server: Fetch main.css
+Server-->>Browser: the CSS file
+Browser->Server: Fetch main.js
+Server-->>Browser: the JavaScript file
+Server->Browser: data is sent as JSON string
+note left of Server: 201-created status code response
+Browser->User: Render new list of notes
+Server->Browser: Send response to browser
+Server->Browser: new data in JSON format
+note right of Browser: Event handler method gets called
+note right of Browser: Browser will not reloads page
+Browser->User: Render notes as a HTML list

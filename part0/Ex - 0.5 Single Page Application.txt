@@ -1,0 +1,19 @@
+title fullstackopen Exercise - 0.5 Single Page Application
+
+actor User
+
+User-Browser Click on submit button
+Browser-Server only one HTTP POST request
+Server-Browser HTML page fetched from the server
+note left of Server form has no action or method attributes
+Server-Browser Send response to browser
+note left of Server 201-created status code response
+Server-Browser new data in JSON format
+note right of Browser Event handler method gets called
+note right of Browser Browser will not reloads page
+Browser-Server Fetch main.css
+Server--Browser the CSS file
+Browser-Server Fetch main.js
+Server--Browser the JavaScript file
+Server-Browser data is sent as JSON string
+Browser-User Render notes as a HTML list
